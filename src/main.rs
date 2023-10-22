@@ -1,24 +1,14 @@
-mod one_layer {
-    pub fn print_characters() {
-        for ch in 'a'..='Z' {
-            println!("{}", ch);
-        }
-    }
-}
+//use crate::print_charactersatoZ;
+use crate::one_layer::print_charactersatoZ;
+use crate::two_layer::print_charactersAtoz;
 
-mod two_layer {
-    pub fn print_characters() {
-        for ch in 'A'..='z' {
-            println!("{}", ch);
-        }
-    }
-}
+mod one_layer;
+mod two_layer;
 
 fn main() {
     println!("One layer characters:");
-    one_layer::print_characters();
+    print_charactersatoZ();
 
     println!("Two layer characters:");
-    two_layer::print_characters();
+    print_charactersAtoz();
 }
-
